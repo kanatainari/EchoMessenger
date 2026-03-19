@@ -33,6 +33,7 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.lstShowChat = new System.Windows.Forms.ListBox();
             this.lblDeco = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -86,12 +87,24 @@
             this.lblDeco.TabIndex = 4;
             this.lblDeco.Text = "----------------------------------------------";
             // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblCount.ForeColor = System.Drawing.Color.White;
+            this.lblCount.Location = new System.Drawing.Point(1042, 654);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(176, 32);
+            this.lblCount.TabIndex = 5;
+            this.lblCount.Text = "현재 대화 : 0개";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1464, 856);
+            this.Controls.Add(this.lblCount);
             this.Controls.Add(this.lblDeco);
             this.Controls.Add(this.lstShowChat);
             this.Controls.Add(this.btnSend);
@@ -111,6 +124,7 @@
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.ListBox lstShowChat;
         private System.Windows.Forms.Label lblDeco;
+        private System.Windows.Forms.Label lblCount;
     }
 }
 
