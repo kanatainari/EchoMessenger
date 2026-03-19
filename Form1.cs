@@ -21,6 +21,11 @@ namespace EchoMessenger
 
             // 초기 메시지 수 표시
             UpdateMessageCount();
+            // 입력창 글자수 제한 (최대 50자)
+            if (txtChatWindow != null)
+            {
+                txtChatWindow.MaxLength = 50;
+            }
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -33,6 +38,14 @@ namespace EchoMessenger
             if (string.IsNullOrWhiteSpace(typed_msg))
             {
                 txtChatWindow.Clear();
+                txtChatWindow.Focus();
+                return;
+            }
+
+            // 글자수 제한(20자) 초과 시 전송 차단 및 경고
+            if (typed_msg.Length > 20)
+            {
+                MessageBox.Show("메시지는 최대 20자까지 입력할 수 있습니다.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtChatWindow.Focus();
                 return;
             }
